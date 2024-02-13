@@ -8,9 +8,8 @@ import (
 
 func main() {
 	app := fiber.New()
-	api := app.Group("/api")
 
-	api.Get("/ping", func(c *fiber.Ctx) error {
+	app.Get("/ping", func(c *fiber.Ctx) error {
 		return c.SendString("pong")
 	})
 
